@@ -55,7 +55,7 @@ base16encode(char const *data, size_t n)
       putchar(c);
     }
     { /* Extract and print lower nibble */
-      int idx = byte & NIBBLE_BIT;
+      int idx = byte & ((1u << NIBBLE_BIT) - 1);
       char c = base16a[idx];
       putchar(c);
     }
